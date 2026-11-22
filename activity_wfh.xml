@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include android:id="@+id/toolbar" layout="@layout/layout_toolbar" />
+
+    <ScrollView android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_blue_card"
+                android:orientation="horizontal"
+                android:padding="16dp">
+
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                    android:gravity="center" android:orientation="vertical">
+                    <TextView android:id="@+id/tvUsed" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:textColor="@color/white" android:textSize="22sp" android:textStyle="bold" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="WFH Used" android:textColor="#CFDCFF" android:textSize="10sp" />
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                    android:gravity="center" android:orientation="vertical">
+                    <TextView android:id="@+id/tvAllowed" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:textColor="@color/white" android:textSize="22sp" android:textStyle="bold" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="WFH Allowed" android:textColor="#CFDCFF" android:textSize="10sp" />
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                    android:gravity="center" android:orientation="vertical">
+                    <TextView android:id="@+id/tvRemaining" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:textColor="@color/white" android:textSize="22sp" android:textStyle="bold" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Remaining" android:textColor="#CFDCFF" android:textSize="10sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout style="@style/AppCard" android:layout_marginTop="12dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Apply for WFH" android:textColor="@color/text_dark"
+                    android:textSize="13sp" android:textStyle="bold" />
+
+                <TextView style="@style/AppLabel" android:text="WFH Type" />
+                <EditText android:id="@+id/etType" style="@style/AppInput" android:hint="Select type" android:inputType="none" />
+
+                <TextView style="@style/AppLabel" android:text="Date" />
+                <EditText android:id="@+id/etDate" style="@style/AppInput" android:hint="yyyy-mm-dd" android:inputType="none" />
+
+                <TextView style="@style/AppLabel" android:text="Work Plan / Tasks" />
+                <EditText
+                    android:id="@+id/etPlan"
+                    style="@style/AppInput"
+                    android:layout_height="100dp"
+                    android:gravity="top"
+                    android:inputType="textMultiLine|textCapSentences"
+                    android:paddingTop="12dp"
+                    android:singleLine="false" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnSubmit"
+                    style="@style/AppButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="SUBMIT WFH REQUEST" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                android:text="Recent WFH Requests"
+                android:textColor="@color/text_dark"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/llRequests"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

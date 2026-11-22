@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include android:id="@+id/toolbar" layout="@layout/layout_toolbar" />
+
+    <ScrollView android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="NOTIFICATIONS" android:textColor="@color/primary" android:textSize="10sp" android:textStyle="bold" />
+
+            <LinearLayout style="@style/AppCard" android:layout_marginTop="8dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="46dp"
+                    android:gravity="center_vertical" android:orientation="horizontal">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                        android:text="Check-In Reminder" android:textColor="@color/text_dark" android:textSize="12sp" />
+                    <com.google.android.material.switchmaterial.SwitchMaterial android:id="@+id/swCheckIn"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="46dp"
+                    android:gravity="center_vertical" android:orientation="horizontal">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                        android:text="Check-Out Reminder" android:textColor="@color/text_dark" android:textSize="12sp" />
+                    <com.google.android.material.switchmaterial.SwitchMaterial android:id="@+id/swCheckOut"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="46dp"
+                    android:gravity="center_vertical" android:orientation="horizontal">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                        android:text="Attendance Alerts" android:textColor="@color/text_dark" android:textSize="12sp" />
+                    <com.google.android.material.switchmaterial.SwitchMaterial android:id="@+id/swAlerts"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_marginTop="16dp" android:text="FACE RECOGNITION"
+                android:textColor="@color/primary" android:textSize="10sp" android:textStyle="bold" />
+
+            <LinearLayout style="@style/AppCard" android:layout_marginTop="8dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="46dp"
+                    android:gravity="center_vertical" android:orientation="horizontal">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                        android:text="Anti-Spoofing Detection" android:textColor="@color/text_dark" android:textSize="12sp" />
+                    <com.google.android.material.switchmaterial.SwitchMaterial android:id="@+id/swSpoof"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="46dp"
+                    android:gravity="center_vertical" android:orientation="horizontal">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                        android:text="Auto Mark Attendance" android:textColor="@color/text_dark" android:textSize="12sp" />
+                    <com.google.android.material.switchmaterial.SwitchMaterial android:id="@+id/swAuto"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_marginTop="16dp" android:text="APP"
+                android:textColor="@color/primary" android:textSize="10sp" android:textStyle="bold" />
+
+            <LinearLayout style="@style/AppCard" android:layout_marginTop="8dp">
+                <LinearLayout android:id="@+id/rowAbout" android:layout_width="match_parent" android:layout_height="46dp"
+                    android:gravity="center_vertical" android:orientation="horizontal">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                        android:text="About App" android:textColor="@color/text_dark" android:textSize="12sp" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="v1.0.0" android:textColor="@color/text_gray" android:textSize="11sp" />
+                </LinearLayout>
+
+                <LinearLayout android:id="@+id/rowClear" android:layout_width="match_parent" android:layout_height="46dp"
+                    android:gravity="center_vertical" android:orientation="horizontal">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                        android:text="Clear App Data" android:textColor="@color/red" android:textSize="12sp"
+                        android:textStyle="bold" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="›" android:textColor="@color/text_gray" android:textSize="18sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

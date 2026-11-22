@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include android:id="@+id/toolbar" layout="@layout/layout_toolbar" />
+
+    <ScrollView android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <LinearLayout style="@style/AppCard">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Leave Balance" android:textColor="@color/text_dark"
+                    android:textSize="13sp" android:textStyle="bold" />
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp" android:orientation="horizontal">
+
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                        android:gravity="center" android:orientation="vertical">
+                        <TextView android:id="@+id/tvCasual" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:textColor="@color/primary" android:textSize="20sp" android:textStyle="bold" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Casual" android:textColor="@color/text_gray" android:textSize="10sp" />
+                    </LinearLayout>
+
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                        android:gravity="center" android:orientation="vertical">
+                        <TextView android:id="@+id/tvSick" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:textColor="@color/green" android:textSize="20sp" android:textStyle="bold" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Sick" android:textColor="@color/text_gray" android:textSize="10sp" />
+                    </LinearLayout>
+
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                        android:gravity="center" android:orientation="vertical">
+                        <TextView android:id="@+id/tvEarned" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:textColor="@color/orange" android:textSize="20sp" android:textStyle="bold" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Earned" android:textColor="@color/text_gray" android:textSize="10sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout style="@style/AppCard" android:layout_marginTop="12dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Apply for Leave" android:textColor="@color/text_dark"
+                    android:textSize="13sp" android:textStyle="bold" />
+
+                <TextView style="@style/AppLabel" android:text="Leave Type" />
+                <EditText android:id="@+id/etType" style="@style/AppInput" android:hint="Select type" android:inputType="none" />
+
+                <TextView style="@style/AppLabel" android:text="From Date" />
+                <EditText android:id="@+id/etFrom" style="@style/AppInput" android:hint="yyyy-mm-dd" android:inputType="none" />
+
+                <TextView style="@style/AppLabel" android:text="To Date" />
+                <EditText android:id="@+id/etTo" style="@style/AppInput" android:hint="yyyy-mm-dd" android:inputType="none" />
+
+                <TextView style="@style/AppLabel" android:text="Reason" />
+                <EditText
+                    android:id="@+id/etReason"
+                    style="@style/AppInput"
+                    android:layout_height="100dp"
+                    android:gravity="top"
+                    android:inputType="textMultiLine|textCapSentences"
+                    android:paddingTop="12dp"
+                    android:singleLine="false" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnSubmit"
+                    style="@style/AppButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="SUBMIT LEAVE REQUEST" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                android:text="My Requests"
+                android:textColor="@color/text_dark"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/llRequests"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
